@@ -1,8 +1,16 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// This is a function called 'createBadge'
+// It has 1 parameter called 'license'
+// This function will be called after the inquirer.prompt has finished
 const createBadge = (license) => {
+  // The variable 'badge' is created but left undefined
   let badge;
+  // A switch statement is created and the 'license' parameter is passed
+  // Depending on the value of 'license'
+  // A different badge img will be set as the value of the variable 'badge'
+  // Then 'badge' will be returned
   switch (license) {
     case "Apache License 2.0":
       badge =
@@ -28,6 +36,11 @@ const createBadge = (license) => {
   return badge;
 };
 
+// This is a function called 'readmeGenerator'
+// It has 2 parameters
+// 1st takes the value of 'badge' passed to it from the 'createsBadge' function
+// 2nd is the destructured object 'answers' created by the 'inquirer.prompt()'
+// This function will be called as a parameter for the fs.writeFile method
 const readmeGenerator = (
   badge,
   {
@@ -44,8 +57,10 @@ const readmeGenerator = (
     username,
     email,
   }
-) => {
-  return `
+) =>
+  // The content for the README file is created and then returned back so that fs.writeFile can create it
+  {
+    return `
  ${badge}
 
 # ${appName}
@@ -105,8 +120,9 @@ ${test}
 GitHub Profile : ${username}
 For any additional questions you can contact me at :  ${email}
 `;
-};
+  };
 
+// Inquirer.prompt asks the user a series of questions
 inquirer
   .prompt([
     {
@@ -178,9 +194,16 @@ inquirer
       type: "input",
     },
   ])
+  // Once all the questions have ended,
+  // THEN
   .then((answers) => {
+    // The 'createBadge' function is called and is passed the 'license' key from the answers object
+    // The returned value is then set under the variable 'badge'
     const badge = createBadge(answers.license);
-
+    // fs.writeFile method is called and passed 3 parameters
+    // The 1st is the type of file to create
+    // The 2nd is the 'readmeGenerator' which creates the content for the README file using the 'badge' variable and 'answers' obj
+    // The 3rd is a cb function in case of an error
     fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
       err ? console.log("Error", err) : console.log("success")
     );
