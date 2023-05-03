@@ -1,65 +1,53 @@
 
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-    # Readme Generator Challenge
+# Readme Generator Challenge
     
-    ## Description 
+## Description 
     
-    This application creates a professional Readme file based on the user's input for their application.
+This application was created to complete challenge 9 for my coding booting camp. This app creates a professional README file based on the user's input for their application.
 
-    ## Table of Contents
+## Table of Contents
 
-    [Visuals](#visuals)
+[Visuals](#visuals)
 
-    [Website](#website)
+[Website](#website)
 
-    [Installation](#installation)
+[Installation](#installation)
 
-    [Usage](#usage)
+[Usage](#usage)
 
-    [Credits](#credits)
+[Credits](#credits)
 
-    [License](#license)
+[License](#license)
 
-    [Contributing](#contributing)
+[Contributing](#contributing)
 
-    [Tests](#tests)
+[Tests](#tests)
+[Questions](#questions)
+## Visuals 
 
-    [Questions](#questions)
+N/A
 
-    ## Visuals 
-    
-    N/A
-    
-    ## Website 
-    
-    N/A
+## Website 
 
-    ## Installation 
-    
-    N/A
-    
-    ## Usage
-   
-    Use the command line to answer prompted questions. A Readme file will the be generated off this input. 
-    
-    ## Credits 
+N/A
+## Installation 
 
-    https://www.youtube.com/watch?v=EKqhENATIKg
+N/A
 
-    ## License 
+## Usage
 
-    MIT License
+In order to use this application, open the command line and answer the prompted questions. A README file will then be generated based on your input. 
 
-    ## Contributing
-
-    N/A
-
-    ## Tests 
-
-    N/A
-
-    ## Questions 
-    GitHub Profile : Frank-Colorado
-    For any additional questions you can contact me at :  chawnkiee@gmail.com
-    
+## Credits 
+https://www.youtube.com/watch?v=EKqhENATIKg : This youtube video was used as a reference in order to create hyperlinks in this README file.
+## License 
+MIT License
+## Contributing
+N/A
+## Tests 
+N/A
+## Questions 
+GitHub Profile : Frank-Colorado
+For any additional questions you can contact me at :  chawnkiee@gmail.com

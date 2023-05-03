@@ -46,70 +46,59 @@ const readmeGenerator = (
   }
 ) => {
   return `
-    ${badge}
+ ${badge}
 
-    # ${appName}
+# ${appName}
     
-    ## Description 
+## Description 
     
-    ${description}
+${description}
 
-    ## Table of Contents
+## Table of Contents
 
-    [Visuals](#visuals)
+[Visuals](#visuals)
 
-    [Website](#website)
+[Website](#website)
 
-    [Installation](#installation)
+[Installation](#installation)
 
-    [Usage](#usage)
+[Usage](#usage)
 
-    [Credits](#credits)
+[Credits](#credits)
 
-    [License](#license)
+[License](#license)
 
-    [Contributing](#contributing)
+[Contributing](#contributing)
 
-    [Tests](#tests)
+[Tests](#tests)
+[Questions](#questions)
+## Visuals 
 
-    [Questions](#questions)
+${visuals}
 
-    ## Visuals 
-    
-    ${visuals}
-    
-    ## Website 
-    
-    ${url}
+## Website 
 
-    ## Installation 
-    
-    ${install}
-    
-    ## Usage
-   
-    ${usage}
-    
-    ## Credits 
+${url}
+## Installation 
 
-    ${credits}
+${install}
 
-    ## License 
+## Usage
 
-    ${license}
+${usage}
 
-    ## Contributing
-
-    ${contribution}
-
-    ## Tests 
-
-    ${test}
-
-    ## Questions 
-    GitHub Profile : ${username}
-    For any additional questions you can contact me at :  ${email}
-    `;
+## Credits 
+${credits}
+## License 
+${license}
+## Contributing
+${contribution}
+## Tests 
+${test}
+## Questions 
+GitHub Profile : ${username}
+For any additional questions you can contact me at :  ${email}
+`;
 };
 
 inquirer
