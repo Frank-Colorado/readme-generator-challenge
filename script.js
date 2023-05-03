@@ -56,11 +56,29 @@ const readmeGenerator = (
 
     ## Table of Contents
 
+    [Visuals](#visuals)
+
+    [Website](#website)
+
+    [Installation](#installation)
+
+    [Usage](#usage)
+
+    [Credits](#credits)
+
+    [License](#license)
+
+    [Contributing](#contributing)
+
+    [Tests](#tests)
+
+    [Questions](#questions)
+
     ## Visuals 
     
     ${visuals}
     
-    ## Website URL 
+    ## Website 
     
     ${url}
 
