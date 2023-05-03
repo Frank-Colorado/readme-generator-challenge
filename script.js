@@ -28,8 +28,10 @@ const createBadge = (license) => {
   return badge;
 };
 
-const readmeGenerator = ({}) => {
-  return `#
+const readmeGenerator = () => {
+  return `
+    
+    #
 
     ## Description 
     
@@ -124,5 +126,8 @@ inquirer
   ])
   .then((answers) => {
     const badge = createBadge(answers.license);
-    console.log(badge);
+
+    fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
+      err ? console.log("Error", err) : console.log("success")
+    );
   });
