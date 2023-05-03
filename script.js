@@ -71,7 +71,9 @@ ${description}
 [Contributing](#contributing)
 
 [Tests](#tests)
+
 [Questions](#questions)
+
 ## Visuals 
 
 ${visuals}
@@ -89,12 +91,16 @@ ${usage}
 
 ## Credits 
 ${credits}
+
 ## License 
 ${license}
+
 ## Contributing
 ${contribution}
+
 ## Tests 
 ${test}
+
 ## Questions 
 GitHub Profile : ${username}
 For any additional questions you can contact me at :  ${email}

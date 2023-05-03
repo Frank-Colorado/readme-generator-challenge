@@ -1,10 +1,9 @@
-
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Readme Generator Challenge
-    
-## Description 
-    
+
+## Description
+
 This application was created to complete challenge 9 for my coding booting camp. This app creates a professional README file based on the user's input for their application.
 
 ## Table of Contents
@@ -24,30 +23,42 @@ This application was created to complete challenge 9 for my coding booting camp.
 [Contributing](#contributing)
 
 [Tests](#tests)
+
 [Questions](#questions)
-## Visuals 
+
+## Visuals
 
 N/A
 
-## Website 
+## Website
 
 N/A
-## Installation 
+
+## Installation
 
 N/A
 
 ## Usage
 
-In order to use this application, open the command line and answer the prompted questions. A README file will then be generated based on your input. 
+In order to use this application, open the command line and answer the prompted questions. A README file will then be generated based on your input.
 
-## Credits 
+## Credits
+
 https://www.youtube.com/watch?v=EKqhENATIKg : This youtube video was used as a reference in order to create hyperlinks in this README file.
-## License 
+
+## License
+
 MIT License
+
 ## Contributing
+
 N/A
-## Tests 
+
+## Tests
+
 N/A
-## Questions 
+
+## Questions
+
 GitHub Profile : Frank-Colorado
-For any additional questions you can contact me at :  chawnkiee@gmail.com
+For any additional questions you can contact me at : chawnkiee@gmail.com
