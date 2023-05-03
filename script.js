@@ -28,38 +28,69 @@ const createBadge = (license) => {
   return badge;
 };
 
-const readmeGenerator = () => {
+const readmeGenerator = (
+  badge,
+  {
+    appName,
+    description,
+    visuals,
+    url,
+    install,
+    usage,
+    contribution,
+    test,
+    credits,
+    license,
+    username,
+    email,
+  }
+) => {
   return `
-    
-    #
+    ${badge}
 
+    # ${appName}
+    
     ## Description 
     
+    ${description}
+
     ## Table of Contents
 
     ## Visuals 
     
+    ${visuals}
     
     ## Website URL 
     
-    
+    ${url}
+
     ## Installation 
     
+    ${install}
     
     ## Usage
    
+    ${usage}
     
     ## Credits 
 
+    ${credits}
+
     ## License 
-    Please refer to the LICENSE in the repo.
-    
+
+    ${license}
+
     ## Contributing
+
+    ${contribution}
 
     ## Tests 
 
+    ${test}
+
     ## Questions 
-    
+    GitHub Profile : ${username}
+    For any additional questions you can contact me at :  ${email}
     `;
 };
 
@@ -73,6 +104,16 @@ inquirer
     {
       name: "description",
       message: "Please give a description of your application.",
+      type: "input",
+    },
+    {
+      name: "visuals",
+      message: "Please input an img link for your application",
+      type: "input",
+    },
+    {
+      name: "url",
+      message: "What is the URL for your application?",
       type: "input",
     },
     {
