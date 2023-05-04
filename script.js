@@ -193,6 +193,11 @@ const questions = [
   },
 ];
 
+// Inquirer.prompt asks the user a series of questions
+const init = async (questions) => {
+  const answers = await inquirer.prompt(questions);
+};
+
 // // Once all the questions have ended,
 // // THEN
 // .then((answers) => {
