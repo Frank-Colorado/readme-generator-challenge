@@ -93,9 +93,10 @@ ${description}
 
 ${visuals}
 
-## Website 
+## Website
 
 ${url}
+
 ## Installation 
 
 ${install}
@@ -105,15 +106,19 @@ ${install}
 ${usage}
 
 ## Credits 
+
 ${credits}
 
 ## License 
+
 ${license}
 
 ## Contributing
+
 ${contribution}
 
 ## Tests 
+
 ${test}
 
 ## Questions 
