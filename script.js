@@ -122,89 +122,88 @@ For any additional questions you can contact me at :  ${email}
 `;
   };
 
-// Inquirer.prompt asks the user a series of questions
-inquirer
-  .prompt([
-    {
-      name: "appName",
-      message: "What is the title of your application?",
-      type: "input",
-    },
-    {
-      name: "description",
-      message: "Please give a description of your application.",
-      type: "input",
-    },
-    {
-      name: "visuals",
-      message: "Please input an img link for your application",
-      type: "input",
-    },
-    {
-      name: "url",
-      message: "What is the URL for your application?",
-      type: "input",
-    },
-    {
-      name: "install",
-      message: "What are the instructions for installing your application?",
-      type: "input",
-    },
-    {
-      name: "usage",
-      message: "How do you use your application?",
-      type: "input",
-    },
-    {
-      name: "contribution",
-      message: "What are the guidelines for contributing to your application?",
-      type: "input",
-    },
-    {
-      name: "test",
-      message: "What are the instructions for testing your application?",
-      type: "input",
-    },
-    {
-      name: "credits",
-      message:
-        "What resources did you use as a reference for creating your application?",
-      type: "input",
-    },
-    {
-      name: "license",
-      message: "Which license do you want to use for your repo?",
-      type: "list",
-      choices: [
-        "Apache License 2.0",
-        "MIT License",
-        "Boost Software License 1.0",
-        "GNU General Public License v3.0",
-        "Mozilla Public License 2.0",
-      ],
-    },
-    {
-      name: "username",
-      message: "What is your GitHub username?",
-      type: "input",
-    },
-    {
-      name: "email",
-      message: "What is your email address?",
-      type: "input",
-    },
-  ])
-  // Once all the questions have ended,
-  // THEN
-  .then((answers) => {
-    // The 'createBadge' function is called and is passed the 'license' key from the answers object
-    // The returned value is then set under the variable 'badge'
-    const badge = createBadge(answers.license);
-    // fs.writeFile method is called and passed 3 parameters
-    // The 1st is the type of file to create
-    // The 2nd is the 'readmeGenerator' which creates the content for the README file using the 'badge' variable and 'answers' obj
-    // The 3rd is a cb function in case of an error
-    fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
-      err ? console.log("Error", err) : console.log("success")
-    );
-  });
+const questions = [
+  {
+    name: "appName",
+    message: "What is the title of your application?",
+    type: "input",
+  },
+  {
+    name: "description",
+    message: "Please give a description of your application.",
+    type: "input",
+  },
+  {
+    name: "visuals",
+    message: "Please input an img link for your application",
+    type: "input",
+  },
+  {
+    name: "url",
+    message: "What is the URL for your application?",
+    type: "input",
+  },
+  {
+    name: "install",
+    message: "What are the instructions for installing your application?",
+    type: "input",
+  },
+  {
+    name: "usage",
+    message: "How do you use your application?",
+    type: "input",
+  },
+  {
+    name: "contribution",
+    message: "What are the guidelines for contributing to your application?",
+    type: "input",
+  },
+  {
+    name: "test",
+    message: "What are the instructions for testing your application?",
+    type: "input",
+  },
+  {
+    name: "credits",
+    message:
+      "What resources did you use as a reference for creating your application?",
+    type: "input",
+  },
+  {
+    name: "license",
+    message: "Which license do you want to use for your repo?",
+    type: "list",
+    choices: [
+      "Apache License 2.0",
+      "MIT License",
+      "Boost Software License 1.0",
+      "GNU General Public License v3.0",
+      "Mozilla Public License 2.0",
+    ],
+  },
+  {
+    name: "username",
+    message: "What is your GitHub username?",
+    type: "input",
+  },
+  {
+    name: "email",
+    message: "What is your email address?",
+    type: "input",
+  },
+];
+
+// // Once all the questions have ended,
+// // THEN
+// .then((answers) => {
+//   // The 'createBadge' function is called and is passed the 'license' key from the answers object
+//   // The returned value is then set under the variable 'badge'
+//   const badge = createBadge(answers.license);
+//   // fs.writeFile method is called and passed 3 parameters
+//   // The 1st is the type of file to create
+//   // The 2nd is the 'readmeGenerator' which creates the content for the README file using the 'badge' variable and 'answers' obj
+//   // The 3rd is a cb function in case of an error
+//   fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
+//     err ? console.log("Error", err) : console.log("success")
+//   );
+// });
