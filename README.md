@@ -4,7 +4,7 @@
 
 ## Description
 
-This application was created to complete challenge 9 for my coding booting camp. This app creates a professional README file based on the user's input for their application.
+This application was created to complete challenge 9 for my coding bootcamp. This app creates a professional README file based on the user's input for their applicaiton. This README was created using this app.
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ N/A
 
 ## Usage
 
-In order to use this application, open the command line and answer the prompted questions. A README file will then be generated based on your input.
+VIDEO HERE
 
 ## Credits
 
@@ -61,4 +61,5 @@ N/A
 ## Questions
 
 GitHub Profile : Frank-Colorado
+
 For any additional questions you can contact me at : chawnkiee@gmail.com

@@ -117,7 +117,7 @@ ${contribution}
 ${test}
 
 ## Questions 
-GitHub Profile : ${username}
+GitHub Profile : https://github.com/${username}  
 For any additional questions you can contact me at :  ${email}
 `;
   };
