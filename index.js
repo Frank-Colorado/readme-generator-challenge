@@ -194,7 +194,7 @@ const questions = [
 ];
 
 // Inquirer.prompt asks the user a series of questions
-const init = async (questions) => {
+const init = async () => {
   const answers = await inquirer.prompt(questions);
   const badge = createBadge(answers.license);
   fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
