@@ -39,7 +39,7 @@ const createBadge = (license) => {
 // This is a function called 'readmeGenerator'
 // It has 2 parameters
 // 1st takes the value of 'badge' passed to it from the 'createsBadge' function
-// 2nd is the destructured object 'answers' created by the 'inquirer.prompt()'
+// 2nd is the destructured object 'answers' created by the function 'init' using inquirer
 // This function will be called as a parameter for the fs.writeFile method
 const readmeGenerator = (
   badge,
@@ -122,6 +122,8 @@ For any additional questions you can contact me at :  ${email}
 `;
   };
 
+// This is an array called 'questions'
+// These questions will be passed to inquirer.prompt()
 const questions = [
   {
     name: "appName",
@@ -193,27 +195,28 @@ const questions = [
   },
 ];
 
-// Inquirer.prompt asks the user a series of questions
+// This is a asynchronous function called 'init'
+// It has 0 parameters
 const init = async () => {
-  const answers = await inquirer.prompt(questions);
-  const badge = createBadge(answers.license);
-  fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
-    err ? console.log("Error", err) : console.log("success")
-  );
+  // A try...catch statement is used to check for any errors
+  try {
+    // Inquirer.prompt asks the user a series of questions
+    // The keyword 'await' is used so that the function will not continue until inquirer.prompt has finished
+    // The response received is then stored in 'answers'
+    const answers = await inquirer.prompt(questions);
+    // The 'createBadge' function is called and is passed the 'license' key from the answers object
+    // The returned value is then set under the variable 'badge'
+    const badge = createBadge(answers.license);
+    // fs.writeFile method is called and passed 3 parameters
+    // The 1st is the type of file to create
+    // The 2nd is the 'readmeGenerator' which creates the content for the README file using the 'badge' variable and 'answers' obj
+    // The 3rd is a cb function in case of an error
+    fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
+      err ? console.log("Error", err) : console.log("success")
+    );
+  } catch (error) {
+    console.log("Error", error);
+  }
 };
 
 init();
-// // Once all the questions have ended,
-// // THEN
-// .then((answers) => {
-//   // The 'createBadge' function is called and is passed the 'license' key from the answers object
-//   // The returned value is then set under the variable 'badge'
-//   const badge = createBadge(answers.license);
-//   // fs.writeFile method is called and passed 3 parameters
-//   // The 1st is the type of file to create
-//   // The 2nd is the 'readmeGenerator' which creates the content for the README file using the 'badge' variable and 'answers' obj
-//   // The 3rd is a cb function in case of an error
-//   fs.writeFile("README.md", readmeGenerator(badge, answers), (err) =>
-//     err ? console.log("Error", err) : console.log("success")
-//   );
-// });
